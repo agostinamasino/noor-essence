@@ -1,0 +1,9 @@
+# Configuración de VSCode
+.vscode/
+
+# Dependencias de Node (si hubiera)
+node_modules/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
