@@ -178,7 +178,7 @@ button:focus {
 /* ===============================
    RESPONSIVE ADJUSTMENTS
 =============================== */
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .card .card-img-top {
     height: 180px;
     object-fit: cover;
@@ -205,6 +205,32 @@ h2 {
 
 .u-mt-2 {
   margin-top: 0.5rem;
+}
+
+/* ===== AJUSTES HEADER MÓVIL ===== */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0.5rem 1rem; 
+    flex-wrap: wrap;       
+    justify-content: center; /* centrar logo y nav si se envuelven */
+  }
+
+  .site-header a.d-flex {
+    justify-content: center; /* logo y texto centrados */
+    margin-bottom: 0.5rem;   /* separar un poco del nav */
+  }
+
+  .navbar-custom .nav {
+    flex-direction: row;      /* horizontal */
+    justify-content: center;  /* centrado */
+    flex-wrap: wrap;          
+    gap: 0.5rem;              /* espacio entre enlaces */
+  }
+
+  .navbar-custom .nav-link {
+    font-size: 0.9rem;       /* ajustar tamaño de letra */
+    padding: 0.4rem 0.8rem;  /* menos espacio */
+  }
 }
 
 /* ===============================
