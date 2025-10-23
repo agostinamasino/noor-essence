@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 * {
   box-sizing: border-box;
 }
@@ -16,6 +17,10 @@ font-family: $font-stack;  background: $bg;
   margin: 0;
   scroll-behavior: smooth;
   padding-top: 70px; 
+
+  @include responsive(tablet){
+    padding-top: 130px !important;
+  }
 }
 
 .container {
