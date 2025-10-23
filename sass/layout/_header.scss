@@ -1,0 +1,60 @@
+@use '../abstracts/mixins' as *;
+
+.site-header {
+  background-color: #201101 !important;
+  color: #f7f5f2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+
+  .site-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .site-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    .logo {
+      margin-right: 0.5rem;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+  .site-title {
+      display: inline-block; // Trata al texto como un bloque
+      vertical-align: middle; // Lo alinea verticalmente con la imagen
+    }
+  }
+
+  
+  .navbar-custom {
+      flex-grow: 1;
+    }
+
+  // RESPONSIVE (celular)
+  @include responsive(tablet) {
+    .site-header-container {
+      flex-wrap: wrap;       
+      justify-content: center; // Centra todo 
+    }
+    
+    .site-logo {
+      justify-content: center;
+      margin-bottom: 0.5rem;  
+    }
+
+    .navbar-custom {
+      flex-grow: 0; // No crece 
+    }
+  }
+}

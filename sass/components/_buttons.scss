@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as *;
+
+.btn-primary {
+  background: $brand;
+  border-color: $brand;
+  color: $dark;
+  font-weight: 700;
+  transition: transform $transition, box-shadow $transition;
+  border-radius: 8px;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba($dark, 0.08);
+  }
+}

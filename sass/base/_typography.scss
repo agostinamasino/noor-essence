@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as *;
+
+.site-title {
+  color: $brand;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 2.4vw, 2.4rem);
+}
+
+h2 {
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+}
+
+.main-content-page {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  color: $muted;
+  font-size: 1.1rem;
+}

@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as *;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+font-family: $font-stack;  background: $bg;
+  color: $dark;
+  line-height: 1.45;
+  margin: 0;
+  scroll-behavior: smooth;
+  padding-top: 70px; 
+}
+
+.container {
+  max-width: $container-max;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+a:focus,
+button:focus {
+  outline: 3px solid rgba($brand, 0.25);
+  outline-offset: 2px;
+}

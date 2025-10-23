@@ -1,0 +1,35 @@
+@use '../abstracts/mixins' as *;
+
+.navbar-custom {
+  .nav {
+    justify-content: flex-end; // Alinea los links a la derecha
+  }
+  
+  .nav-link {
+    color: #a36f3b;
+    font-weight: 600;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #efeee0;
+    }
+
+    &.active {
+      color: #dfd5d3;
+    }
+  }
+
+  @include responsive(tablet) {
+    .nav {
+      flex-direction: row;      
+      justify-content: center;  
+      flex-wrap: wrap;          
+      gap: 0.5rem;              
+    }
+    
+    .nav-link {
+      font-size: 0.9rem;        
+      padding: 0.4rem 0.8rem;   
+    }
+  }
+}
