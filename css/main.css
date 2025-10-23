@@ -105,10 +105,14 @@ h2 {
 }
 
 footer.site-footer {
-  background: transparent;
+  background: #201101;
+  color: #f7f5f2;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   text-align: center;
+}
+footer.site-footer p {
+  margin-bottom: 0;
 }
 footer.site-footer .footer-container {
   text-align: center;
@@ -119,17 +123,6 @@ footer.site-footer .footer-copyright {
 footer.site-footer .footer-address {
   font-size: 0.875em;
   color: #7b6a63;
-  margin-bottom: 0;
-}
-
-.site-footer-internal {
-  background-color: #201101;
-  color: #f7f5f2;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  text-align: center;
-}
-.site-footer-internal p {
   margin-bottom: 0;
 }
 
