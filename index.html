@@ -20,13 +20,13 @@
        ENCABEZADO FIJO
        =============================== -->
   <header class="site-header">
-    <div class="container d-flex align-items-center justify-content-between py-3">
+    <div class="container <strong>site-header-container</strong>">
       
       <!-- Logo y título -->
-      <a href="index.html" class="d-flex align-items-center text-decoration-none">
-        <img src="medios/logo.jpg" alt="Logotipo Noor Essence" class="logo me-2" width="56" height="56">
-        <span class="h4 mb-0 site-title">Noor Essence</span>
-      </a>
+        <a href="index.html" class="<strong>site-logo</strong>">
+         <img src="medios/logo.jpg" alt="Logotipo Noor Essence" class="logo" width="56" height="56">
+         <span class="site-title">Noor Essence</span>
+        </a>
 
       <!-- Menú de navegación -->
       <nav class="navbar-custom" aria-label="Menú principal">
@@ -45,8 +45,8 @@
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 class="display-3 fw-bold">NUEVAS ESENCIAS</h1>
-      <p class="lead">Descubrí nuestra nueva colección</p>
+      <h1 class="<strong>hero-title</strong>">NUEVAS ESENCIAS</h1>
+      <p class="<strong>hero-subtitle</strong>">Descubrí nuestra nueva colección</p>
     </div>
   </section>
 
@@ -54,17 +54,17 @@
        CONTENIDO PRINCIPAL
        =============================== -->
   <main>
-    <section class="container my-5">
-      <div class="row align-items-center">
+    <section class="container <strong>intro-section</strong>">
+      <div class="row <strong>intro-row</strong>">
         <!-- Texto descriptivo -->
         <div class="col-md-6">
           <h2>Perfumes árabes con la esencia más pura del oriente</h2>
-          <p class="lead">Descubrí fragancias únicas que transmiten elegancia, tradición y misterio. Notas intensas y duraderas pensadas para quienes buscan algo distintivo.</p>
+          <p class="<strong>intro-text</strong>">Descubrí fragancias únicas que transmiten elegancia, tradición y misterio. Notas intensas y duraderas pensadas para quienes buscan algo distintivo.</p>
         </div>
 
-        <!-- Imagen ilustrativa -->
-        <div class="col-md-6 text-center">
-          <img src="medios/perfume.jpg" alt="Botella de perfume árabe Noor Essence" class="img-fluid rounded">
+      
+        <div class="col-md-6 <strong>intro-image-wrapper</strong>">
+          <img src="medios/perfume.jpg" alt="Botella de perfume árabe Noor Essence" class="<strong>intro-image</strong>">
         </div>
       </div>
     </section>
@@ -73,26 +73,29 @@
          SECCIÓN “NUESTRA ESENCIA”
          =============================== -->
     <section class="contenido">
-      <h3>Nuestra Esencia</h3>
+      <h2>Nuestra Esencia</h2>
       <p>En Noor Essence, cada aroma cuenta una historia. Inspirados en la cultura árabe, seleccionamos materias primas nobles para crear perfumes con carácter, presencia y duración.</p>
       
-      <!-- Galería de perfumes destacados -->
+      <!-- perfumes destacados -->
       <div class="imagenes">
-        <div>
+        
+        <article class="<strong>esencia-item</strong>">
           <img src="medios/a.jpg" alt="Amber Oud">
-          <h6 class="mt-2">Amber Oud</h6>
-          <p class="small text-dark">Notas intensas de madera de oud y ámbar.</p>
-        </div>
-        <div>
+          <h3>Amber Oud</h3>
+          <p class="<strong>esencia-descripcion</strong>">Notas intensas de madera de oud y ámbar.</p>
+        </article>
+
+        <article class="<strong>esencia-item</strong>">
           <img src="medios/yarac.jpg" alt="Yara Candy">
-          <h6 class="mt-2">Yara Candy</h6>
-          <p class="small text-dark">Alegre, frutal y floral.</p>
-        </div>
-        <div>
+          <h3>Yara Candy</h3>
+          <p class="esencia-descripcion">Alegre, frutal y floral.</p>
+        </article>
+
+        <article class="<strong>esencia-item</strong>">
           <img src="medios/hisc.jpg" alt="His Confession">
-          <h6 class="mt-2">His Confession</h6>
-          <p class="small text-dark">Aroma misterioso y seductor.</p>
-        </div>
+          <h3>His Confession</h3>
+          <p class="<strong>esencia-descripcion</strong>">Aroma misterioso y seductor.</p>
+        </article>
       </div>
     </section>
   </main>
@@ -101,9 +104,9 @@
        PIE DE PÁGINA (FOOTER)
        =============================== -->
   <footer class="site-footer">
-    <div class="container text-center">
-      <p class="mb-1">&copy; 2025 Noor Essence</p>
-      <p class="small muted mb-0">Chacabuco 660, San Miguel de Tucumán</p>
+    <div class="container <strong>footer-container</strong>">
+      <p class="<strong>footer-copyright</strong>">&copy; 2025 Noor Essence</p>
+      <p class="<strong>footer-address</strong>">Chacabuco 660, San Miguel de Tucumán</p>
     </div>
   </footer>
 

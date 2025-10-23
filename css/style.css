@@ -27,7 +27,7 @@ body {
   line-height: 1.45;
   margin: 0;
   scroll-behavior: smooth;
-  padding-top: 70px; /* compensa header fijo */
+  padding-top: 70px; 
 }
 
 /* ===============================
@@ -43,19 +43,59 @@ body {
 /* ===============================
    HEADER / FOOTER
 =============================== */
-.site-footer footer {
+footer.site-footer {
   background: transparent;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
 }
 
-.site-header {
+.site-header{
   background-color: #201101 !important;
-  color: #f7f5f2;            /* texto claro */
-  position: fixed;            /* mantener fijo */
+  color: #f7f5f2;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1030;
 }
+
+.site-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.site-logo .logo {
+  margin-right: 0.5rem;
+}
+
+/* Estilos footer*/
+.footer-container {
+  text-align: center;
+
+}
+
+.footer-copyright {
+  margin-bottom: 0.25rem;
+}
+
+.footer-address {
+  font-size: .875em;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
 
 /* ===============================
    LOGO
@@ -70,20 +110,212 @@ body {
 =============================== */
 .site-title {
   color:var(--brand);
+
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
-.lead {
-  color: #c99b6b;
+/* ===============================
+   HERO SECTION
+=============================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('../medios/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 🔹 clave para parallax */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1; /* debe estar debajo del contenido */
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(19, 18, 18, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.hero-title {
+  font-size: calc(1.375rem + 1.5vw);
+  font-weight: 700;
+}
+.hero-subtitle {
+  color: rgb(30, 29, 29);
+  font-weight: 700;
+
+  font-size: 1.25rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   CONTENIDO
+=============================== */
+.intro-section {
+  max-width: 1100px; 
+
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.intro-section img {
+  box-shadow: none; /* quitar sombra al logo/imagen */
+}
+
+.intro-section h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  margin-bottom: 1.5rem;
+}
+
+.intro-section .intro-text {
+  max-width: 800px;
+  margin-bottom: 0;
+  line-height: 1.6;
+  text-align: justify;
+
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.intro-row {
+  align-items: center;
+}
+
+.intro-image-wrapper {
+  text-align: center;
+}
+
+.intro-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+/* ===============================
+   EFECTO SCROLL FADE
+=============================== */
+.contenido {
+  width: 100vw;
+  background-color: #c99b6b;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contenido h2 {
+  color: var(--dark);
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.contenido p {
+  color: var(--dark);
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+}
+
+/* Contenedor de imágenes */
+.imagenes {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+}
+
+.esencia-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.imagenes img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto hover */
+.esencia-item:hover img {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.esencia-item h3 {
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.esencia-descripcion {
+  font-size: .875em;
+  color: var(--dark);
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+  line-height: 1.4;
 }
 
 /* ===============================
    PRODUCTOS
 =============================== */
-.card {
+.card.producto {
   border-radius: calc(var(--radius) - 2px);
   box-shadow: 0 6px 18px rgba(43, 27, 23, 0.06);
   border: 1px solid rgba(43, 27, 23, 0.06);
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imágenes dentro de tarjetas de productos */
+.card.producto img{
+  width: 100%;        /* ocupa todo el ancho de la tarjeta */
+  height: 180px; 
+  object-fit: cover;    
+  border-radius: 10px;
+  margin: 0;
+  display: block;
+}
+
+/* Efecto hover */
+.card.producto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Product listing grid (responsive) */
@@ -99,12 +331,6 @@ img {
   height: auto;
   display: block;
   border-radius: 6px;
-}
-
-/* Producto style */
-.producto img {
-  height: 200px;
-  object-fit: cover;
 }
 
 /* ===============================
@@ -161,13 +387,6 @@ img {
 /* ===============================
    UTILITY
 =============================== */
-.muted {
-  color: var(--muted);
-}
-
-.center {
-  text-align: center;
-}
 
 a:focus,
 button:focus {
@@ -179,9 +398,8 @@ button:focus {
    RESPONSIVE ADJUSTMENTS
 =============================== */
 @media (max-width: 768px) {
-  .card .card-img-top {
-    height: 180px;
-    object-fit: cover;
+  .card.producto img {
+
   }
 
   .map-wrapper iframe {
@@ -198,16 +416,9 @@ h2 {
   font-size: clamp(1.25rem, 2vw, 1.6rem);
 }
 
-/* Re-usable utility classes */
-.u-gap-2 {
-  gap: 0.5rem;
-}
 
-.u-mt-2 {
-  margin-top: 0.5rem;
-}
 
-/* ===== AJUSTES HEADER MÓVIL ===== */
+/* ===== AJUSTES HEADER CELULAR ===== */
 @media (max-width: 768px) {
   .site-header {
     padding: 0.5rem 1rem; 
@@ -215,7 +426,7 @@ h2 {
     justify-content: center; /* centrar logo y nav si se envuelven */
   }
 
-  .site-header a.d-flex {
+  .site-header .site-logo {
     justify-content: center; /* logo y texto centrados */
     margin-bottom: 0.5rem;   /* separar un poco del nav */
   }
@@ -233,135 +444,7 @@ h2 {
   }
 }
 
-/* ===============================
-   HERO SECTION
-=============================== */
-.hero {
-  position: relative;
-  height: 100vh;
-  background-image: url('../medios/fondo.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* 🔹 clave para parallax */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  z-index: 1; /* debe estar debajo del contenido */
-}
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(19, 18, 18, 0.4);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: white;
-  text-align: center;
-  animation: fadeIn 1.5s ease-out;
-}
-
-.hero-content p.lead {
-  color: rgb(30, 29, 29);
-  font-weight: 700;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===============================
-   CONTENIDO
-=============================== */
-.container.my-5 {
-  max-width: 1100px; /* ancho contenido centralizado */
-  margin: 5rem auto; /* espacio arriba y abajo */
-}
-
-.container.my-5 img {
-  box-shadow: none; /* quitar sombra al logo/imagen */
-}
-
-.container.my-5 h2 {
-  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
-  margin-bottom: 1.5rem;
-}
-
-.container.my-5 p.lead {
-  max-width: 800px;
-  margin-bottom: 0;
-  line-height: 1.6;
-  text-align: justify;
-}
-
-/* ===============================
-   EFECTO SCROLL FADE
-=============================== */
-.contenido {
-  width: 100vw;
-  background-color: #c99b6b;
-  padding: 6rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.contenido h3 {
-  color: var(--dark);
-  margin-bottom: 1rem;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-}
-
-.contenido p.lead {
-  color: var(--dark);
-  max-width: 900px;
-  margin: 0 auto 3rem auto;
-  line-height: 1.6;
-}
-
-/* Contenedor de imágenes */
-.imagenes {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: nowrap;
-  margin-top: 2rem;
-}
-
-.imagenes div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.imagenes img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 0.5rem;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-/* Efecto hover */
-.imagenes div:hover img {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-}
 
 /* Responsive */
 @media (max-width: 992px) {
@@ -384,20 +467,68 @@ h2 {
   }
 }
 
-/* ===============================
-   TARJETAS DE PRODUCTOS CON HOVER
-=============================== */
-.card.producto {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.main-content-page {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
-.card.producto:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+.page-title {
+  margin-bottom: 1rem;
 }
 
-/* Reducir tamaño de las imágenes dentro de las tarjetas */
-.card.producto img {
-  height: 180px;
-  object-fit: cover;
+.page-subtitle {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.grid-cols-responsive {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card-description {
+  font-size: .875em;
+}
+
+.site-footer-internal {
+  background-color: #201101;
+  color: #f7f5f2;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.site-footer-internal p {
+  margin-bottom: 0;
+}
+ 
+.contact-grid {
+  row-gap: 1.5rem;
+}
+
+.contact-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.contact-links-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.contact-hours-title {
+  font-size: 1rem; 
+  font-weight: 500;
+
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-hours-time {
+  font-size: .875em;
+  color: var(--muted);
 }
