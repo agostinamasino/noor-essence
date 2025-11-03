@@ -15,6 +15,12 @@ body {
   line-height: 1.45;
   margin: 0;
   scroll-behavior: smooth;
+  padding-top: 70px;
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 150px;
+  }
 }
 
 .container {
@@ -129,6 +135,11 @@ footer.site-footer .footer-address {
 .site-header {
   background-color: #201101 !important;
   color: #f7f5f2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
 }
 .site-header .site-header-container {
   display: flex;
