@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+
 * {
   box-sizing: border-box;
 }
@@ -11,14 +12,15 @@ body {
 }
 
 body {
-font-family: $font-stack;  background: $bg;
+  font-family: $font-stack;  
+  background: $bg;
   color: $dark;
   line-height: 1.45;
   margin: 0;
-  scroll-behavior: smooth;
-  padding-top: 70px; 
+  scroll-behavior: smooth; 
 
 }
+
 
 .container {
   max-width: $container-max;
