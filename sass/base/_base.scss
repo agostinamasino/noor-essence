@@ -18,8 +18,14 @@ body {
   line-height: 1.45;
   margin: 0;
   scroll-behavior: smooth; 
+  padding-top: 70px;
+
+  @include responsive(tablet) {
+    padding-top: 150px;
+  }
 
 }
+
 
 
 .container {

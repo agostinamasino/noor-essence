@@ -3,6 +3,11 @@
 .site-header {
   background-color: #201101 !important;
   color: #f7f5f2;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
 
   .site-header-container {
     display: flex;
