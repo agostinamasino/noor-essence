@@ -16,6 +16,7 @@
 
   @include responsive(tablet) {
     background-attachment: scroll;
+    height: 90vh;
   }
 
   .hero-overlay {

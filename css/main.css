@@ -257,6 +257,7 @@ footer.site-footer .footer-address {
 @media (max-width: 768px) {
   .hero {
     background-attachment: scroll;
+    height: 90vh;
   }
 }
 .hero .hero-overlay {
