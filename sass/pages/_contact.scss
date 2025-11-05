@@ -8,10 +8,6 @@
   box-shadow: 0 10px 30px rgba($dark, 0.1); // Sombra sutil
   margin-top: 2.5rem;  // Espacio debajo del subtítulo
  
-  // En móvil, los apila (el mapa queda abajo)
-  @include responsive(tablet) {
-    flex-direction: column;
-  }
 }
 
 .contact-info-panel {

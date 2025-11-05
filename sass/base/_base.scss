@@ -19,14 +19,15 @@ body {
   margin: 0;
   scroll-behavior: smooth; 
   padding-top: 70px;
-
-  @include responsive(tablet) {
-    padding-top: 150px;
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
 }
 
-
+.site-wrapper {
+  flex-grow: 1; 
+}
 
 .container {
   max-width: $container-max;
