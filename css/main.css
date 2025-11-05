@@ -254,6 +254,11 @@ footer.site-footer .footer-address {
   overflow: hidden;
   z-index: 1;
 }
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
 .hero .hero-overlay {
   position: absolute;
   inset: 0;
